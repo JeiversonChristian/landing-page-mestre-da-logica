@@ -1,0 +1,55 @@
+/* =======================================================
+   CSS GLOBAL: Variáveis, Reset e Tipografia
+   ======================================================= */
+
+:root {
+    /* --- Paleta de Cores (Tema: Dark Logic / Matrix Moderno) --- */
+    --cor-fundo-principal: #09090B; /* Preto quase absoluto */
+    --cor-fundo-secundario: #18181B; /* Cinza chumbo */
+    
+    --cor-destaque: #00DC82; /* Verde Neon (A cor da venda/sucesso) */
+    --cor-destaque-hover: #00b368; /* Verde mais escuro para hover */
+    
+    --cor-texto-principal: #F4F4F5; /* Branco gelo (menos cansativo que branco puro) */
+    --cor-texto-secundario: #A1A1AA; /* Cinza claro para descrições */
+    
+    --cor-borda: #27272A; /* Cinza para linhas sutis */
+
+    /* --- Tipografia --- */
+    --fonte-padrao: 'Inter', sans-serif; /* Para textos longos */
+    --fonte-titulo: 'Space Mono', monospace; /* Para títulos com estilo "código" */
+}
+
+/* --- Reset Básico (Zerar margens) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que bordas não aumentem o tamanho dos elementos */
+}
+
+/* --- Configurações do Corpo --- */
+body {
+    background-color: var(--cor-fundo-principal);
+    color: var(--cor-texto-principal);
+    font-family: var(--fonte-padrao);
+    -webkit-font-smoothing: antialiased; /* Deixa a fonte mais nítida no Mac/Chrome */
+    line-height: 1.6; /* Melhora a leitura */
+}
+
+/* --- Configurações Padrão de Imagens --- */
+img {
+    max-width: 100%; /* Imagem nunca estoura a tela */
+    display: block;
+}
+
+/* --- Configurações Padrão de Botões e Links --- */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    font-family: var(--fonte-padrao);
+}
