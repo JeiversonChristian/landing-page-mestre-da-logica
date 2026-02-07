@@ -1,0 +1,105 @@
+/* =======================================================
+   MÓDULO: HERO SECTION (A Capa)
+   ======================================================= */
+
+#hero {
+    /* Um degradê sutil no fundo para não ficar chapado */
+    background: linear-gradient(to bottom, var(--cor-fundo-principal), var(--cor-fundo-secundario));
+    padding: 80px 20px; /* Espaço em cima e embaixo */
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+/* Container que segura os dois lados (Texto e Imagem) */
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: space-between; /* Espalha texto e imagem */
+    gap: 40px; /* Espaço entre eles */
+}
+
+/* --- Lado Esquerdo: Texto --- */
+.hero-texto {
+    max-width: 600px; /* Segura o texto para não esticar demais */
+}
+
+/* O selo "Método Comprovado" */
+.badge {
+    background-color: rgba(0, 220, 130, 0.1); /* Verde transparente */
+    color: var(--cor-destaque);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border: 1px solid var(--cor-destaque);
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+#hero h1 {
+    font-family: var(--fonte-titulo);
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.texto-destaque {
+    color: var(--cor-destaque); /* Palavra "Lógica" em verde */
+}
+
+#hero p {
+    font-size: 1.1rem;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 30px;
+}
+
+/* --- O Botão de Compra (CTA) --- */
+.botao-cta {
+    display: inline-block;
+    background-color: var(--cor-destaque);
+    color: #000; /* Texto preto para contraste no verde neon */
+    font-weight: 800; /* Super negrito */
+    padding: 18px 40px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 0 20px rgba(0, 220, 130, 0.4); /* Brilho neon */
+}
+
+.botao-cta:hover {
+    background-color: var(--cor-destaque-hover);
+    transform: translateY(-3px); /* Sobe um pouquinho */
+    box-shadow: 0 0 30px rgba(0, 220, 130, 0.6); /* Brilho aumenta */
+}
+
+.garantia-txt {
+    font-size: 0.8rem;
+    margin-top: 15px;
+    opacity: 0.7;
+}
+
+/* --- Lado Direito: Imagem --- */
+.hero-visual img {
+    border-radius: 20px;
+    border: 2px solid var(--cor-borda);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5); /* Sombra elegante */
+    width: 100%; /* Responsivo */
+}
+
+/* --- Responsividade (Celular) --- */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column; /* Um embaixo do outro */
+        text-align: center; /* Texto centralizado */
+    }
+
+    .hero-texto {
+        margin-bottom: 30px;
+    }
+
+    #hero h1 {
+        font-size: 2rem; /* Diminui a fonte no celular */
+    }
+}
