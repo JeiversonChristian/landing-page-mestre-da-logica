@@ -1,0 +1,154 @@
+/* =======================================================
+   MÓDULO: SEÇÃO OFERTA (PREÇO E CHECKOUT)
+   ======================================================= */
+
+#oferta {
+    background-color: var(--cor-fundo-principal);
+    padding: 100px 20px;
+    background-image: radial-gradient(circle at center, #1a2e26 0%, #09090B 70%); /* Efeito de luz verde no fundo */
+}
+
+/* O Cartão Principal */
+.card-oferta {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(24, 24, 27, 0.8); /* Fundo semi-transparente */
+    border: 2px solid var(--cor-destaque); /* Borda Neon */
+    border-radius: 20px;
+    padding: 50px 30px;
+    text-align: center;
+    box-shadow: 0 0 50px rgba(0, 220, 130, 0.15);
+    backdrop-filter: blur(10px); /* Efeito vidro */
+}
+
+.destaque-oferta {
+    background-color: var(--cor-destaque);
+    color: #000;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.cabecalho-oferta h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* --- Contador (Timer) --- */
+.contador-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.bloco-tempo {
+    display: flex;
+    flex-direction: column;
+}
+
+.bloco-tempo span {
+    font-family: var(--fonte-titulo);
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--cor-destaque);
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 8px;
+    min-width: 70px;
+}
+
+.bloco-tempo small {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--cor-texto-secundario);
+    margin-top: 5px;
+}
+
+.separador {
+    font-size: 2rem;
+    color: var(--cor-texto-secundario);
+    font-weight: bold;
+    margin-top: -20px; /* Ajuste visual */
+}
+
+/* --- Preços --- */
+.preco-antigo {
+    text-decoration: line-through;
+    color: #ff4d4d; /* Vermelho lavada */
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.preco-atual {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--cor-texto-principal);
+}
+
+.preco-atual .moeda {
+    font-size: 1.5rem;
+    vertical-align: super;
+}
+
+.preco-atual .centavos {
+    font-size: 2rem;
+}
+
+.parcelamento {
+    color: var(--cor-texto-secundario);
+    margin-bottom: 30px;
+}
+
+/* Ajuste no botão CTA para ficar gigante */
+.botao-grande {
+    width: 100%;
+    padding: 25px;
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+
+/* --- Garantia --- */
+.garantia-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.icone-garantia {
+    font-size: 2.5rem;
+    color: var(--cor-destaque);
+}
+
+.texto-garantia strong {
+    display: block;
+    color: var(--cor-texto-principal);
+}
+
+.texto-garantia p {
+    font-size: 0.85rem;
+    color: var(--cor-texto-secundario);
+    margin: 0; /* Remove margem padrão */
+}
+
+.pagamento-seguro {
+    font-size: 0.8rem;
+    color: var(--cor-texto-secundario);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
