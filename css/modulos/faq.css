@@ -1,0 +1,83 @@
+/* =======================================================
+   MÓDULO: SEÇÃO FAQ (PERGUNTAS FREQUENTES)
+   ======================================================= */
+
+#faq {
+    background-color: var(--cor-fundo-secundario);
+    padding: 100px 20px;
+}
+
+.lista-faq {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* O container de cada pergunta */
+.faq-item {
+    background-color: var(--cor-fundo-principal);
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    overflow: hidden; /* Garante que nada saia das bordas */
+    transition: all 0.3s;
+}
+
+/* Quando a pergunta está aberta */
+.faq-item[open] {
+    border-color: var(--cor-destaque); /* Borda fica verde */
+}
+
+/* A parte clicável (Pergunta) */
+summary {
+    list-style: none; /* Remove a setinha padrão feia do navegador */
+    padding: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--cor-texto-principal);
+}
+
+/* Remove a setinha padrão no Chrome/Safari */
+summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Efeito Hover na pergunta */
+summary:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* Ícone da setinha */
+summary i {
+    color: var(--cor-destaque);
+    font-size: 1.2rem;
+    transition: transform 0.3s;
+}
+
+/* Gira a setinha quando está aberto */
+.faq-item[open] summary i {
+    transform: rotate(180deg);
+}
+
+/* A Resposta */
+.faq-resposta {
+    padding: 0 20px 20px 20px;
+    color: var(--cor-texto-secundario);
+    line-height: 1.6;
+    border-top: 1px solid transparent; /* Espaço invisível */
+}
+
+/* Animação suave de entrada */
+.faq-item[open] .faq-resposta {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
