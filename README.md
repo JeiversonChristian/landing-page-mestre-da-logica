@@ -34,13 +34,15 @@ Este projeto serve como modelo base (boilerplate) para serviços de criação de
 
 ## 🚀 Tecnologias Utilizadas
 * **HTML5 Semântico:** Estrutura acessível e otimizada para SEO.
-* **CSS3 Moderno:** * Variáveis (`:root`) para consistência de cores e fontes.
+* **CSS3 Moderno:** 
+    * Variáveis (`:root`) para consistência de cores e fontes.
     * **Flexbox** e **CSS Grid** para layouts complexos.
     * Design responsivo com Media Queries.
-* **JavaScript (ES6+):** * Manipulação do DOM.
+* **JavaScript (ES6+):** 
+    * Manipulação do DOM.
     * Módulos (`import/export`) para código limpo e organizado.
 * **Ativos:**
-    * Ícones: [Phosphor Icons](https://phosphoricons.com/).
+    * Ícones: Phosphor Icons.
     * Fontes: Google Fonts.
 
 ## 📂 Estrutura do Projeto
