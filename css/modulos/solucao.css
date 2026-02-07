@@ -1,0 +1,88 @@
+/* =======================================================
+   MÓDULO: SEÇÃO SOLUÇÃO (O MÉTODO)
+   ======================================================= */
+
+#solucao {
+    background-color: var(--cor-fundo-principal); /* Volta pro fundo escuro para contraste */
+    padding: 100px 20px;
+    border-top: 1px solid var(--cor-borda);
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+/* Reutilizamos .cabecalho-secao do global ou do arquivo anterior, 
+   mas garantimos centralização aqui caso precise */
+.cabecalho-secao {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.grade-solucao {
+    display: grid;
+    /* Grid de 2 colunas no PC */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto 60px; /* Margem embaixo para o botão */
+}
+
+.card-modulo {
+    display: flex;
+    align-items: flex-start; /* Alinha no topo */
+    gap: 20px;
+    padding: 30px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 12px;
+    background: linear-gradient(145deg, #0e0e10, #09090b);
+    transition: 0.3s;
+}
+
+.card-modulo:hover {
+    border-color: var(--cor-destaque);
+    transform: translateX(5px); /* Move levemente para a direita */
+}
+
+/* O número grande e estiloso (01, 02...) */
+.numero-modulo {
+    font-family: var(--fonte-titulo);
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--cor-borda); /* Cor apagada */
+    line-height: 1;
+    transition: 0.3s;
+}
+
+/* Quando passa o mouse no card, o número acende */
+.card-modulo:hover .numero-modulo {
+    color: var(--cor-destaque);
+    text-shadow: 0 0 10px rgba(0, 220, 130, 0.5);
+}
+
+.conteudo-modulo h3 {
+    font-size: 1.3rem;
+    color: var(--cor-texto-principal);
+    margin-bottom: 10px;
+}
+
+.conteudo-modulo p {
+    font-size: 0.95rem;
+    color: var(--cor-texto-secundario);
+}
+
+/* Container para centralizar o botão */
+.cta-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Ajuste Responsivo */
+@media (max-width: 768px) {
+    .grade-solucao {
+        grid-template-columns: 1fr; /* 1 coluna no celular */
+    }
+    
+    .card-modulo {
+        flex-direction: column; /* Número em cima do texto no celular */
+        align-items: center;
+        text-align: center;
+    }
+}
