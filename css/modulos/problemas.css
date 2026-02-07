@@ -1,0 +1,69 @@
+/* =======================================================
+   MÓDULO: SEÇÃO PROBLEMAS (A DOR)
+   ======================================================= */
+
+#problemas {
+    background-color: var(--cor-fundo-secundario); /* Fundo levemente mais claro para diferenciar do Hero */
+    padding: 100px 20px;
+}
+
+/* Centraliza o título e subtítulo da seção */
+.cabecalho-secao {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px; /* Margem inferior grande para separar dos cards */
+}
+
+.cabecalho-secao h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+/* A Grade de Cards */
+.grade-problemas {
+    display: grid;
+    /* Cria colunas automáticas (min 300px). Se não couber 3, quebra linha */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* O Card Individual */
+.card-problema {
+    background-color: var(--cor-fundo-principal); /* Fundo preto do card */
+    border: 1px solid var(--cor-borda);
+    padding: 40px 30px;
+    border-radius: 12px;
+    transition: 0.3s;
+    /* Para alinhar o ícone e texto */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Efeito Hover: O card "acende" levemente */
+.card-problema:hover {
+    border-color: var(--cor-destaque);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.icone-problema {
+    font-size: 3rem;
+    color: var(--cor-destaque);
+    margin-bottom: 20px;
+}
+
+.card-problema h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--cor-texto-principal);
+}
+
+.card-problema p {
+    color: var(--cor-texto-secundario);
+    font-size: 1rem;
+    line-height: 1.6;
+}
