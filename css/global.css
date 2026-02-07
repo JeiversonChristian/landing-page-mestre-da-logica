@@ -53,3 +53,11 @@ button {
     border: none;
     font-family: var(--fonte-padrao);
 }
+
+/* O Container segura o conteúdo no meio da tela */
+.container {
+    max-width: 1200px; /* Largura máxima do site */
+    margin: 0 auto;    /* O segredo: 0 em cima/baixo, AUTO nas laterais (centraliza) */
+    padding: 0 20px;   /* Uma margem interna de segurança para celulares */
+    width: 100%;
+}
