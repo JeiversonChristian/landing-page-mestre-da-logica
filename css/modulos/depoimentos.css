@@ -1,0 +1,72 @@
+/* =======================================================
+   MÓDULO: SEÇÃO DEPOIMENTOS (PROVA SOCIAL)
+   ======================================================= */
+
+#depoimentos {
+    background-color: var(--cor-fundo-secundario); /* Fundo cinza para diferenciar */
+    padding: 100px 20px;
+}
+
+/* Reutiliza o estilo de grade, mas ajustado para depoimentos */
+.grade-depoimentos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-depoimento {
+    background-color: var(--cor-fundo-principal);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--cor-borda);
+    transition: 0.3s;
+    /* Flexbox vertical para alinhar estrelas no final */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-depoimento:hover {
+    transform: translateY(-5px);
+    border-color: var(--cor-texto-secundario); /* Destaque sutil */
+}
+
+/* Cabeçalho do Card (Foto + Nome) */
+.perfil-aluno {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    border-radius: 50%; /* Foto redonda */
+    border: 2px solid var(--cor-destaque);
+}
+
+.dados-aluno strong {
+    display: block;
+    color: var(--cor-texto-principal);
+    font-size: 1.1rem;
+}
+
+.dados-aluno span {
+    font-size: 0.85rem;
+    color: var(--cor-texto-secundario);
+}
+
+/* O texto do depoimento */
+.card-depoimento p {
+    font-style: italic; /* Itálico para parecer citação */
+    color: var(--cor-texto-secundario);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Estrelinhas */
+.estrelas {
+    font-size: 1.2rem;
+    color: #FFD700; /* Amarelo Ouro */
+}
